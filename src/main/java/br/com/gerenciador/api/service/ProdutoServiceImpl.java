@@ -59,7 +59,7 @@ public class ProdutoServiceImpl implements ProdutoService {
         produto.setNome(dto.nome());
         produto.setPreco(dto.preco());
         produto.setDescricao(dto.descricao());
-        produto.setQuantidateEstoque(dto.quantidateEstoque());
+        produto.setQuantidadeEstoque(dto.quantidadeEstoque());
         produto.setFornecedor(buscarFornecedor(dto.fornecedorId()));
 
         return produtoMapper.toDTO(produtoRepository.save(produto));

@@ -31,6 +31,9 @@ public class Fornecedor {
     @Column(name = "tipo_fornecedor", nullable = false)
     private TipoFornecedorEnum tipoFornecedor;
 
+    @Column(name = "email", nullable = false, length = 100)
+    private String email;
+
     @OneToOne(cascade = CascadeType.ALL) //Define o relacionamento One-to-One e exclusão em cascata
     @JoinColumn(name = "endereco_id", referencedColumnName = "id") // Chave estrangeira no banco de dados
     private Endereco endereco;

@@ -37,7 +37,7 @@ public class Endereco {
     @Column(name = "pais", nullable = false, length = 50)
     private String pais;
 
-    @Column(name = "cep", nullable = false, length = 8)
+    @Column(name = "cep", nullable = false, length = 10)
     private String cep;
 
 }

@@ -32,7 +32,7 @@ public record EnderecoDTO(
         String pais,
 
         @NotBlank(message = "O campo cep deve ser preenchido")
-        @Size (max = 8)
+        @Size (max = 10)
         String cep
 ) {
 }

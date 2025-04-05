@@ -29,11 +29,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         String path = request.getServletPath();
 
-// 🔓 Ignora caminhos públicos (login, registro, Swagger)
-        if (path.startsWith("/auth")
+        // 🔓 Ignora caminhos públicos (login, registro, Swagger)
+        if (path.startsWith("/auth/login")
+                || path.startsWith("/auth/register")
                 || path.startsWith("/v3/api-docs")
                 || path.startsWith("/swagger-ui")
                 || path.equals("/swagger-ui.html")) {
+            System.out.println("🔓 Caminho público, seguindo sem autenticação.");
             filterChain.doFilter(request, response);
             return;
         }
@@ -56,6 +58,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
                 authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                 SecurityContextHolder.getContext().setAuthentication(authToken);
+            } else {
+                System.out.println("❌ Token inválido para o usuário: " + username);
             }
         }
 

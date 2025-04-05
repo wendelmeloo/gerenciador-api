@@ -6,6 +6,7 @@ public record FornecedorResponseDTO(
     Long id,
     String nome,
     String cnpj,
+    String email,
     TipoFornecedorEnum tipoFornecedor,
     EnderecoResponseDTO endereco
 ) {

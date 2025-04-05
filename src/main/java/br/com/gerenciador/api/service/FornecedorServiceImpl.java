@@ -53,6 +53,7 @@ public class FornecedorServiceImpl implements FornecedorService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Fornecedor não encontrado"));
         fornecedor.setNome(dto.nome());
         fornecedor.setCnpj(dto.cnpj());
+        fornecedor.setEmail(dto.email());
         fornecedor.setTipoFornecedor(dto.tipoFornecedor());
         fornecedor.setEndereco(enderecoMapper.toEntity(dto.endereco()));
 

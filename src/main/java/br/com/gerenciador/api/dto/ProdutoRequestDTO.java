@@ -19,7 +19,7 @@ public record ProdutoRequestDTO(
 
         @NotNull(message = "Quantidade Estoque é obrigatorio")
         @DecimalMin(value = "0", message = "Quantidade Estoque não pode ser negativa")
-        Integer quantidateEstoque,
+        Integer quantidadeEstoque,
 
         @NotNull(message = "Fornecedor é obrigatorio")
         Long fornecedorId

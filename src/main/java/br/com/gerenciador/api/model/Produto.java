@@ -28,7 +28,7 @@ public class Produto {
     private String descricao;
 
     @Column(name = "quantidade_estoque")
-    private Integer quantidateEstoque;
+    private Integer quantidadeEstoque;
 
     @ManyToOne
     @JoinColumn(name = "fornecedor_id", referencedColumnName = "id", nullable = false)

@@ -7,7 +7,7 @@ public record ProdutoResponseDTO(
     String nome,
     BigDecimal preco,
     String descricao,
-    Integer quantidateEstoque,
+    Integer quantidadeEstoque,
     FornecedorResponseDTO fornecedor
 ) {
 }
