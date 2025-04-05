@@ -68,7 +68,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(List.of("http://localhost:5173", "https://gp-prof-front.vercel.app"));
+        config.setAllowedOrigins(List.of("http://localhost:5173", "https://front-gerenciador-turma-03.vercel.app"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 
